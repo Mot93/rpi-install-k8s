@@ -1,0 +1,6 @@
+---
+- hosts: dramble
+  remote_user: ubuntu
+  become: yes
+  roles:
+    - rpi-k8s

@@ -1,0 +1,13 @@
+---
+# tasks file for rpi-k8s
+- name: Rebooting to free resources
+  reboot:
+
+# TODO: enable selection of the runtime
+- name: Installing the runtime
+  import_role: 
+    name: rpi-install-container-runtime
+
+- name: Installing kubeadm
+  import_role: 
+    name: rpi-install-kubeadm
