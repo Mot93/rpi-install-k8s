@@ -1,7 +1,7 @@
 ---
 # tasks file for rpi-k8s
-- name: Rebooting to free resources
-  reboot:
+- name: Run pre install best practice
+  import_tasks: update.yml
 
 # TODO: enable selection of the runtime
 - name: Installing the runtime
