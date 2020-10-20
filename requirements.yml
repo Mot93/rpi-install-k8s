@@ -1,0 +1,11 @@
+collections:
+  -name: community.general
+
+roles:
+  - src: https://github.com/Mot93/rpi-install-container-runtime.git
+    smc: git
+    #version: 1.0
+
+  - src: https://github.com/Mot93/rpi-install-kubeadm.git
+    smc: git
+    #version: 1.0
