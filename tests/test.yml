@@ -2,6 +2,6 @@
   remote_user: ubuntu
   become: yes
   roles:
-    - role: rpi-k8s
+    - role: rpi-install-k8s
       vars:
         container_runtime: docker

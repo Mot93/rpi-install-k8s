@@ -44,7 +44,7 @@ Out of the box example:
       remote_user: ubuntu
       become: yes
       roles:
-        - rpi-k8s
+        - rpi-install-k8s
 
 Example choosing the container runtime among the avaliable:
 
@@ -52,7 +52,7 @@ Example choosing the container runtime among the avaliable:
       remote_user: ubuntu
       become: yes
       roles:
-        - role: rpi-k8s
+        - role: rpi-install-k8s
           vars:
             container_runtime: containerd
 
