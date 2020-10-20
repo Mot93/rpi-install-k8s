@@ -3,10 +3,11 @@
 - name: Run pre install best practice
   import_tasks: update.yml
 
-# TODO: enable selection of the runtime
 - name: Installing the runtime
   import_role: 
     name: rpi-install-container-runtime
+  vars:
+    - runtime: "{{ container_runtime }}"
 
 - name: Installing kubeadm
   import_role: 
