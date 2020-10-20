@@ -1,6 +1,7 @@
----
 - hosts: dramble
   remote_user: ubuntu
   become: yes
   roles:
-    - rpi-k8s
+    - role: rpi-k8s
+      vars:
+        container_runtime: docker
