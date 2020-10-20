@@ -48,11 +48,11 @@ galaxy_info:
     #       Maximum 20 tags per role.
 
 dependencies: 
-  - src: git+https://github.com/Mot93/rpi-install-container-runtime.git
-    name: rpi-install-container-runtime
+  #- src: git+https://github.com/Mot93/rpi-install-container-runtime.git
+  #  name: rpi-install-container-runtime
 
-  - src: git+https://github.com/Mot93/rpi-install-kubeadm.git
-    name: rpi-install-kubeadm
+  #- src: git+https://github.com/Mot93/rpi-install-kubeadm.git
+  #  name: rpi-install-kubeadm
 
   # List your role dependencies here, one per line. Be sure to remove the '[]' above,
   # if you add dependencies to this list.
