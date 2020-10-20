@@ -1,2 +1,3 @@
 ---
 # defaults file for rpi-k8s
+container_runtime: docker
