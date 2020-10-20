@@ -6,27 +6,55 @@ A role design to install k8s on a cluser of raspberry pis
 Requirements
 ------------
 
-In order to use this role you need to install the community.general.modprobe plugin
+The community.general.modprobe plugin is necessary for the role.
+
+    ansible-galaxy collection install community.general
+
 You need root privileges to run this script.
 
     become: yes
-    
-TODO:
 
 Role Variables
 --------------
 
-TODO:
+Currently, there are 2 container runtime to choose from: docker and containerd.
+To choose the container runtime to use, set the variable `container_runtime` to one of the avaliable option.
+
+Example:
+
+    ansible-playbook example.yml --extra-vars "container_runtime=comntainerd"
+
+For more information: [defining variable at runtime](https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#defining-variables-at-runtime)
 
 Dependencies
 ------------
 
-TODO:
+To use this role, fist all requirement have to be met.
+
+Use the requirement.yml file to automate the process of downloading all the requirement.
+
+    ansible-galaxy install -r requirements.yml
 
 Example Playbook
 ----------------
 
-TODO:
+Out of the box example:
+
+    - hosts: dramble
+      remote_user: ubuntu
+      become: yes
+      roles:
+        - rpi-k8s
+
+Example choosing the container runtime among the avaliable:
+
+    - hosts: dramble
+      remote_user: ubuntu
+      become: yes
+      roles:
+        - role: rpi-k8s
+          vars:
+            container_runtime: containerd
 
 License
 -------
