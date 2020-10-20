@@ -1,7 +1,7 @@
 - name: Reboot to free resources
   reboot:
 
-- name: Update adn upgrade all packages
+- name: Update and upgrade all packages
   apt:
     update_cache: yes
     upgrade: yes
