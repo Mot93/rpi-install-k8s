@@ -1,6 +1,6 @@
 ---
 # tasks file for rpi-k8s
-- host: all
+- hosts: all
 
   pre_tasks:
     - name: Run pre install best practice
