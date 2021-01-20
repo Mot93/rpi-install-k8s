@@ -38,6 +38,10 @@ Use the requirement.yml file to automate the process of downloading all the requ
 Example Playbook
 ----------------
 
+Installing the play
+
+    ansible-galaxy install git+https://github.com/Mot93/rpi-install-k8s.git
+
 Out of the box example:
 
     - hosts: dramble
