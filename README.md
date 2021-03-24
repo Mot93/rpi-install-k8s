@@ -10,6 +10,11 @@ The community.general.modprobe plugin is necessary for the role.
 
     ansible-galaxy collection install community.general
 
+Two more roles are necessary.
+
+    ansible-galaxy install git+https://github.com/Mot93/rpi-install-container-runtime.git
+    ansible-galaxy install git+https://github.com/Mot93/rpi-install-kubeadm.git
+
 You need root privileges to run this script.
 
     become: yes
@@ -59,6 +64,27 @@ Example choosing the container runtime among the avaliable:
         - role: rpi-install-k8s
           vars:
             container_runtime: containerd
+
+Testing and Debugging
+---------------------
+
+Create a folder (for the purpose of this guide the folder name will be k8s):
+
+    mkdir k8s
+    cd k8s
+
+Clone the project:
+
+    git clone https://github.com/Mot93/rpi-install-k8s.git
+
+Create symlink to the file in the test folder:
+
+    ln -s ./rpi-install-k8s/tests/test.yml ./
+    ln -s ./rpi-install-k8s/tests/ansible.cfg ./
+
+Run the tests:
+
+    ansible-playbook test.yml
 
 License
 -------

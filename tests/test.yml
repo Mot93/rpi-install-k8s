@@ -1,4 +1,4 @@
-- hosts: dramble
+- hosts: k8s
   remote_user: ubuntu
   become: yes
   roles:

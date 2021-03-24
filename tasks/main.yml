@@ -1,11 +1,12 @@
 ---
 # tasks file for rpi-k8s
-- hosts: all
+- name: Run pre install best practice
+  import_tasks: update.yml
 
-  pre_tasks:
-    - name: Run pre install best practice
-      import_tasks: update.yml
+- name: installing container runtime
+  import_role: 
+    name: rpi-install-container-runtime
 
-  roles:
-  - rpi-install-container-runtime
-  - rpi-install-kubeadm
+- name: installing kubeadm
+  import_role: 
+    name: rpi-install-kubeadm
